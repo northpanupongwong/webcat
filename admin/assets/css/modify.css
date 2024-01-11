@@ -1,0 +1,46 @@
+:root {
+    --color-danger: #ff4961;
+    --color-success: #28d094;
+}
+
+.fontContantTbEnable {
+    color: var(--color-success);
+}
+
+.fontContantTbEnable {
+    color: var(--color-success);
+}
+
+.fontContantTbDisable {
+    color: var(--color-danger);
+}
+
+.dis-mod {
+    color: #ffffff;
+    background-color: #d3d3d3;
+    border-color: #dee2e6;
+}
+
+.dis-mod:hover {
+    z-index: 2;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #d3d3d3;
+    border-color: #dee2e6;
+}
+
+.fontContantAlert {
+    color: #FF3300;
+    font-size: 14px;
+}
+
+.formInputContantTbAlertY{
+    border:#ff0000 solid 1px !important;
+}
+
+.formInputContantTbAlertYcheck{
+    color:#FF0000;
+}
+.font-large-2 {
+    font-size: 3rem!important;
+}

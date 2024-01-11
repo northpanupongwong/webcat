@@ -2,13 +2,14 @@
 $check_login_status = 1;
 include("./lib/session.php");
 include("./lib/connect.php");
+include("./lib/function.php");
+
 
 $inputUser = trim($_POST["inputUsername"]);
 $inputPass= trim($_POST["inputPassword"]);
 
 
 $sqlMaster = "SELECT staff_id FROM staff WHERE staff_username='".$inputUser."' AND staff_password='".$inputPass."' ";
-
 $queryMaster=$db->Execute($sqlMaster);
 $recordMaster=$queryMaster->_numOfRows;
 

@@ -3,6 +3,7 @@
 include("./lib/function.php");
 include("./lib/session.php");
 include("./lib/checkMember.php");
+include('./lib/connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,7 @@ include("./lib/checkMember.php");
     <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, AdminWrap lite admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, Elegant admin lite design, Elegant admin lite dashboard bootstrap 4 dashboard template">
     <meta name="description" content="Elegant Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Elegant Admin Lite Template by WrapPixel</title>
+    <title>Webpet Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
@@ -26,6 +27,7 @@ include("./lib/checkMember.php");
     <link href="./assets/node_modules/c3-master/c3.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="dist/css/style.css" rel="stylesheet">
+    <link href="./assets/css/modify.css" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -85,10 +87,9 @@ include("./lib/checkMember.php");
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">หน้าหลัก</a></li>
                                 <li class="breadcrumb-item active">Dashboard</li>
                             </ol>
-
                         </div>
                     </div>
                 </div>
@@ -98,89 +99,91 @@ include("./lib/checkMember.php");
                 <!-- ============================================================== -->
                 <!-- Yearly Sales -->
                 <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card oh">
-                            <div class="card-body">
-                                <div class="d-flex m-b-30 align-items-center no-block">
-                                    <h5 class="card-title ">Yearly Sales</h5>
-                                    <div class="ml-auto">
-                                        <ul class="list-inline font-12">
-                                            <li><i class="fa fa-circle text-info"></i> Iphone</li>
-                                            <li><i class="fa fa-circle text-primary"></i> Ipad</li>
-                                        </ul>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="primary">278</h3>
+                                            <span>โรงพยาบาลสัตว์</span>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fa fa-hospital-o text-primary font-large-2 float-right"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="morris-area-chart" style="height: 350px;"></div>
-                            </div>
-                            <div class="card-body bg-light">
-                                <div class="row text-center m-b-20">
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h2 class="m-b-0 font-light">6000</h2><span class="text-muted">Total sale</span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h2 class="m-b-0 font-light">4000</h2><span class="text-muted">Iphone</span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <h2 class="m-b-0 font-light">2000</h2><span class="text-muted">Ipad</span>
+                                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-3 col-sm-6 col-12">
                         <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Today's Schedule</h5>
-                                <h6 class="card-subtitle">check out your daily schedule</h6>
-                                <div class="steamline m-t-40">
-                                    <div class="sl-item">
-                                        <div class="sl-left bg-success"> <i class="fa fa-user"></i></div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Meeting today <span class="sl-date"> 5pm</span>
-                                            </div>
-                                            <div class="desc">you can write anything </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="warning">156</h3>
+                                            <span>ประกาศขอความช่วยเหลือ</span>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fa fa-comment text-warning font-large-2 float-right"></i>
                                         </div>
                                     </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left bg-info"><i class="fa fa-image"></i></div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Send documents to Clark</div>
-                                            <div class="desc">Lorem Ipsum is simply </div>
+                                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="success">64.89 %</h3>
+                                            <span>ช่วยเหลือสำเร็จ</span>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fa fa-paw text-success font-large-2 float-right"></i>
                                         </div>
                                     </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left"> <img class="img-circle" alt="user" src="./assets/images/users/1.jpg"> </div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">John Doe <span class="sl-date"> 5pm</span></div>
-                                            <div class="desc">Call today with gohn doe </div>
+                                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 64.89%" aria-valuenow="64.89" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="media-body text-left">
+                                            <h3 class="danger">423</h3>
+                                            <span>เข้าชมเว็บไซต์</span>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <i class="fa fa-globe text-danger font-large-2 float-right"></i>
                                         </div>
                                     </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left"> <img class="img-circle" alt="user" src="./assets/images/users/2.jpg"> </div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Go to the Doctor <span class="sl-date">5 minutes
-                                                    ago</span></div>
-                                            <div class="desc">Contrary to popular belief</div>
-                                        </div>
-                                    </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left"> <img class="img-circle" alt="user" src="./assets/images/users/3.jpg"> </div>
-                                        <div class="sl-right">
-                                            <div><a href="#">Tiger Sroff</a> <span class="sl-date">5 minutes ago</span>
-                                            </div>
-                                            <div class="desc">Approve meeting with tiger
-                                                <br><a href="javascript:void(0)" class="btn m-t-10 m-r-5 btn-rounded btn-outline-success">Apporve</a>
-                                                <a href="javascript:void(0)" class="btn m-t-10 btn-rounded btn-outline-danger">Refuse</a>
-                                            </div>
-                                        </div>
+                                    <div class="progress mt-1 mb-0" style="height: 7px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
                 <!-- News -->
                 <!-- ============================================================== -->
                 <div class="row">
@@ -190,84 +193,61 @@ include("./lib/checkMember.php");
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div>
-                                        <h5 class="card-title">Sales Overview</h5>
-                                        <h6 class="card-subtitle">Check the monthly sales </h6>
+                                        <h5 class="card-title">Logs</h5>
+                                        <h6 class="card-subtitle">Check your logs </h6>
                                     </div>
-                                    <div class="ml-auto">
+                                    <!-- <div class="ml-auto">
                                         <select class="custom-select b-0">
                                             <option>January</option>
                                             <option value="1">February</option>
                                             <option value="2" selected="">March</option>
                                             <option value="3">April</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">#</th>
-                                            <th>NAME</th>
-                                            <th>DATE</th>
-                                            <th>PRICE</th>
+                                            <th width="4%" class="text-center">#</th>
+                                            <th width="20%" class="text-center">ACTION</th>
+                                            <th width="20%" class="text-center">TYPE</th>
+                                            <th width="16%" class="text-center">DATE</th>
+                                            <th width="20%" class="text-center">IP</th>
+                                            <th width="20%" class="text-center">SESSION_ID</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
-                                            <td class="txt-oflo">April 18, 2017</td>
-                                            <td><span class="text-success">$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">2</td>
-                                            <td class="txt-oflo">Real Homes WP Theme</td>
-                                            <td class="txt-oflo">April 19, 2017</td>
-                                            <td><span class="text-info">$1250</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">3</td>
-                                            <td class="txt-oflo">Ample Admin</td>
-                                            <td class="txt-oflo">April 19, 2017</td>
-                                            <td><span class="text-info">$1250</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">4</td>
-                                            <td class="txt-oflo">Medical Pro WP Theme</td>
-                                            <td class="txt-oflo">April 20, 2017</td>
-                                            <td><span class="text-danger">-$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">5</td>
-                                            <td class="txt-oflo">Hosting press html</td>
-                                            <td class="txt-oflo">April 21, 2017</td>
-                                            <td><span class="text-success">$24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">6</td>
-                                            <td class="txt-oflo">Digital Agency PSD</td>
-                                            <td class="txt-oflo">April 23, 2017</td>
-                                            <td><span class="text-danger">-$14</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">7</td>
-                                            <td class="txt-oflo">Helping Hands WP Theme</td>
-                                            <td class="txt-oflo">April 22, 2017</td>
-                                            <td><span class="text-success">$64</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">8</td>
-                                            <td class="txt-oflo">Helping Hands WP Theme</td>
-                                            <td class="txt-oflo">April 22, 2017</td>
-                                            <td><span class="text-success">$64</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">9</td>
-                                            <td class="txt-oflo">Ample Admin</td>
-                                            <td class="txt-oflo">April 19, 2017</td>
-                                            <td><span class="text-info">$1250</span></td>
-                                        </tr>
+                                        <?php
+                                        // Value SQL SELECT #########################
+                                        $table = "logs";
+                                        $slect_data = array();
+                                        $slect_data[$table . "_action as " . substr("_action", 1)] = "";
+                                        $slect_data[$table  . "_sessid as " . substr("_sessid", 1)] = "";
+                                        $slect_data[$table  . "_ip as " . substr("_ip", 1)] = "";
+                                        $slect_data[$table  . "_time as " . substr("_time", 1)] = "";
+                                        $slect_data[$table  . "_type as " . substr("_type", 1)] = "";
+                                        $sql = "SELECT \n" . implode(",\n", array_keys($slect_data)) . " FROM " . $table;
+                                        $sql .= " ORDER BY " . $table  . "_time DESC";
+                                        $sql .= "  LIMIT 10 ";
+                                        $i = 1;
+                                        $query = QueryDB($coreLanguageSQL, $sql);
+                                        foreach ($query as $key => $value) {
+                                        ?>
+                                            <tr>
+                                                <td class="text-center"><?php echo $i ?></td>
+                                                <td class="txt-oflo text-center"><? echo $value['action'] ?></td>
+                                                <td class="txt-oflo text-center"><? echo $value['type'] ?></td>
+                                                <td class="txt-oflo text-center"><? echo dateFormatReal($value['time']) ?></td>
+                                                <td class="txt-oflo text-center"><? echo $value['ip'] ?></td>
+                                                <td class="text-center"><span class="text-success"><? echo $value['sessid'] ?></span></td>
+                                            </tr>
+                                        <?php
+                                            $i++;
+                                        }
+                                        ?>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -277,107 +257,7 @@ include("./lib/checkMember.php");
                 <!-- ============================================================== -->
                 <!-- To do chat and message -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Feeds</h4>
-                            </div>
-                            <ul class="feeds p-b-20">
-                                <li>
-                                    <div class="bg-info"><i class="fa fa-bell-o"></i></div> You have 4 pending tasks.
-                                    <span class="text-muted">Just Now</span>
-                                </li>
-                                <li>
-                                    <div class="bg-success"><i class="ti-server"></i></div> Server #1 overloaded.<span class="text-muted">2 Hours ago</span>
-                                </li>
-                                <li>
-                                    <div class="bg-warning"><i class="ti-shopping-cart"></i></div> New order
-                                    received.<span class="text-muted">31 May</span>
-                                </li>
-                                <li>
-                                    <div class="bg-danger"><i class="ti-user"></i></div> New user registered.<span class="text-muted">30 May</span>
-                                </li>
-                                <li>
-                                    <div class="bg-dark"><i class="fa fa-bell-o"></i></div> New Version just arrived.
-                                    <span class="text-muted">27 May</span>
-                                </li>
-                                <li>
-                                    <div class="bg-info"><i class="fa fa-bell-o"></i></div> You have 4 pending tasks.
-                                    <span class="text-muted">Just Now</span>
-                                </li>
-                                <li>
-                                    <div class="bg-danger"><i class="ti-user"></i></div> New user registered.<span class="text-muted">30 May</span>
-                                </li>
-                                <li>
-                                    <div class="bg-dark"><i class="fa fa-bell-o"></i></div> New Version just arrived.
-                                    <span class="text-muted">27 May</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Messages (5 New)</h5>
-                                <div class="message-box">
-                                    <div class="message-widget message-scroll">
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="./assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Pavan kumar</h5> <span class="mail-desc">Lorem Ipsum is simply dummy
-                                                    text of the printing and type setting industry. Lorem Ipsum has
-                                                    been.</span> <span class="time">9:30 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="./assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you
-                                                    at</span> <span class="time">9:10 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <span class="round">A</span> <span class="profile-status away pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Arijit Sinh</h5> <span class="mail-desc">Simply dummy text of the
-                                                    printing and typesetting industry.</span> <span class="time">9:08
-                                                    AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="./assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my
-                                                    admin!</span> <span class="time">9:02 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="./assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Pavan kumar</h5> <span class="mail-desc">Welcome to the Elite
-                                                    Admin</span> <span class="time">9:30 AM</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="javascript:void(0)">
-                                            <div class="user-img"> <img src="./assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you
-                                                    at</span> <span class="time">9:10 AM</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->

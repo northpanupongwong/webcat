@@ -6,6 +6,7 @@
     <?php include('inc/metatag.php'); ?>
     <?php include('inc/loadstyle.php'); ?>
 </head>
+
 <body>
 
     <div class="global-container">

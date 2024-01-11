@@ -30,3 +30,101 @@ function checkLogoutUser() {
         }
     });
 }
+
+function viewContactNew(fileAc) {
+
+
+    var TYPE = "POST";
+    var URL = fileAc;
+
+    var dataSet = jQuery("#myForm").serialize();
+
+    jQuery.ajax({
+        type: TYPE,
+        url: URL,
+        data: dataSet,
+        success: function(html) {
+            jQuery("#boxContantLoad").show();
+            jQuery("#boxContantLoad").html(html);
+
+        }
+    });
+}
+
+function editContactNew(fileAc, id) {
+    document.myForm.action = fileAc;
+    document.myForm.submit();
+}
+
+function delContactNew(fileAc) {
+
+
+    var TYPE = "POST";
+    var URL = fileAc;
+
+    var dataSet = jQuery("#myForm").serialize();
+
+    jQuery.ajax({
+        type: TYPE,
+        url: URL,
+        data: dataSet,
+        success: function(html) {
+
+        }
+    });
+}
+
+function btnBackPage(fileAc) {
+    document.myForm.action = fileAc;
+    document.myForm.submit();
+ }
+
+ function changeStatus(loaddder, tablename, statusname, statusid, loadderstatus, fileAc) {
+
+    jQuery("#" + loaddder + "").show();
+
+    var TYPE = "POST";
+    var URL = fileAc;
+    var dataSet = {
+        Valueloaddder: loaddder,
+        Valuetablename: tablename,
+        Valuestatusname: statusname,
+        Valuestatusid: statusid,
+        Valueloadderstatus: loadderstatus,
+        Valuefilestatus: fileAc
+    };
+
+
+    jQuery.ajax({
+        type: TYPE,
+        url: URL,
+        data: dataSet,
+        success: function(html) {
+
+            jQuery("#" + loadderstatus + "").show();
+            jQuery("#" + loadderstatus + "").html(html);
+            jQuery("#" + loaddder + "").hide();
+        }
+    });
+}
+
+function delContactNew(fileAc) {
+
+
+    var TYPE = "POST";
+    var URL = fileAc;
+
+    var dataSet = jQuery("#myForm").serialize();
+
+    jQuery.ajax({
+        type: TYPE,
+        url: URL,
+        data: dataSet,
+        success: function(html) {
+
+            jQuery("#loadCheckComplete").show();
+            jQuery("#loadCheckComplete").html(html);
+
+        }
+    });
+}

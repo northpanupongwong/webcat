@@ -4,20 +4,20 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home.php">
+                    <a class="navbar-brand" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>home.php">
                         <!-- Logo icon --><b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="./assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo icon -->
-                            <img src="./assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                            <img src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text --><span>
                             <!-- dark Logo text -->
-                            <img src="./assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <img src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                             <!-- Light Logo text -->
-                            <img src="./assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span>
+                            <img src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span>
                     </a>
                 </div>
                 <!-- ============================================================== -->
@@ -34,22 +34,22 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
+                        <!-- <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
                                 href="javascript:void(0)"><i class="fa fa-search"></i></a>
                             <form class="app-search">
                                 <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
                                     class="srh-btn"><i class="fa fa-times"></i></a>
                             </form>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                    src="./assets/images/users/1.jpg" alt="user" class="img-circle" width="30"></a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="javascript:void(0)"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">admin <img
+                                    src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/users/1.jpg" alt="user" class="img-circle" width="30"></a>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->

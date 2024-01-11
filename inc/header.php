@@ -20,22 +20,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav align-items-lg-baseline me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">หน้าหลัก</a>
+                        <a class="nav-link <?php if($_SERVER['SCRIPT_NAME']=="/webcat/index.php") { ?>  active  <?php   }  ?>>" aria-current="page" href="index.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">ประกาศต่างๆ</a>
+                        <a class="nav-link <?php if($_SERVER['SCRIPT_NAME']=="/webcat/announce.php") { ?>  active  <?php   }  ?>" aria-current="page" href="announce.php">ประกาศต่างๆ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">วิเคราะห์โรค</a>
+                        <a class="nav-link <?php if($_SERVER['SCRIPT_NAME']=="/webcat/analysis.php") { ?>  active  <?php   }  ?>" aria-current="page" href="analysis.php">วิเคราะห์โรค</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">ขอความช่วยเหลือ</a>
+                        <a class="nav-link <?php if($_SERVER['SCRIPT_NAME']=="/webcat/help.php") { ?>  active  <?php   }  ?>" aria-current="page" href="help.php">ขอความช่วยเหลือ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">ซื้อขายแลกเปลี่ยน</a>
+                        <a class="nav-link <?php if($_SERVER['SCRIPT_NAME']=="/webcat/trade.php") { ?>  active  <?php   }  ?>" aria-current="page" href="trade.php">ซื้อขายแลกเปลี่ยน</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">ติดต่อเรา</a>
+                        <a class="nav-link <?php if($_SERVER['SCRIPT_NAME']=="/webcat/contact.php") { ?>  active  <?php   }  ?>" aria-current="page" href="contact.php">ติดต่อเรา</a>
                     </li>
                 </ul>
             </div>

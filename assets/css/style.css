@@ -1171,7 +1171,7 @@ body {
 
 body {
   font-family: "Athiti", sans-serif;
-  background-color: #fff;
+  background-color: #F5EBEB;
   line-height: 1;
   word-break: break-word;
   color: var(--color-default);
@@ -3454,7 +3454,7 @@ div.swal2-html-container {
   padding-bottom: 1.75rem;
 }
 .download-block .file-box .wrapper .inner {
-  border-top: 1px solid #fbf2ff;
+  border-top: 1px solid #f3f2ff;
   padding-top: 1rem;
 }
 .download-block .file-box .wrapper .inner .item-list li {
