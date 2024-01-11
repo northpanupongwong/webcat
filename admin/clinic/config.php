@@ -2,7 +2,7 @@
 $Cfolder = '../';
 
 $namefolder = "clinic";
-$title = "คลินิก";
+$title = "โรงพยาบาลสัตว์";
 $description = "รายละเอียด";
 
 $table = "clinic";

@@ -7,7 +7,7 @@ $sql = "SELECT  " . $table . "_pic FROM " . $table . " WHERE  " . $table . "_id=
 $Query = QueryDB($coreLanguageSQL, $sql);
 $Row = FetchArrayDB($coreLanguageSQL, $Query);
 $deletepic = $Row[0];
-$file_path = '../upload/' . $namefolder;
+$file_path = '../../upload/' . $namefolder;
 
 if(file_exists($file_path."/".$deletepic)) {
     @unlink($file_path."/".$deletepic);

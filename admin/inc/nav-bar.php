@@ -15,10 +15,24 @@
                                     class="fa fa-tachometer"></i><span class="hide-menu">Dashboard</span></a></li>
                         <!-- <li> <a class="waves-effect waves-dark" href="pages-profile.php" aria-expanded="false"><i
                                     class="fa fa-user-circle-o"></i><span class="hide-menu">Profile</span></a></li> -->
-                        <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>table-basic.php" aria-expanded="false"><i
-                                    class="fa fa-table"></i><span class="hide-menu"></span>Tables</a></li>
+                        <!-- <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>table-basic.php" aria-expanded="false"><i
+                                    class="fa fa-table"></i><span class="hide-menu"></span>Tables</a></li> -->
+                                    <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>member/index.php" aria-expanded="false"><i
+                                    class="fa fa-users"></i><span class="hide-menu"></span>Member</a></li>
                         <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>clinic/index.php" aria-expanded="false"><i
-                                    class="fa fa-table"></i><span class="hide-menu"></span>Clinic</a></li>
+                                    class="fa fa-hospital-o"></i><span class="hide-menu"></span>Clinic</a></li>
+                                    <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>race/index.php" aria-expanded="false"><i
+                        class="fa fa-paw"></i><span class="hide-menu"></span>Race</a></li>
+                        <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>announce/index.php" aria-expanded="false"><i
+                                    class="fa fa-star-o"></i><span class="hide-menu"></span>Announce</a></li>
+                        <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>track/index.php" aria-expanded="false"><i
+                        class="fa fa-comment"></i><span class="hide-menu"></span>Tracking</a></li>
+                        <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>symptom/index.php" aria-expanded="false"><i
+                        class="fa fa-tint"></i><span class="hide-menu"></span>Symptom</a></li>
+                        <li> <a class="waves-effect waves-dark" href="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>disease/index.php" aria-expanded="false"><i
+                        class="fa fa-flask"></i><span class="hide-menu"></span>Disease</a></li>
+
+                        
                         <!-- <li> <a class="waves-effect waves-dark" href="icon-fontawesome.php" aria-expanded="false"><i
                                     class="fa fa-smile-o"></i><span class="hide-menu"></span>Icon</a></li>
                         <li> <a class="waves-effect waves-dark" href="map-google.php" aria-expanded="false"><i

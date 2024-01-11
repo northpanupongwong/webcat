@@ -5,7 +5,7 @@ include('../lib/function.php');
 include('../lib/connect.php');
 include('../lib/session.php');
 
-$mod_path_office = "../upload/" . $namefolder;
+$mod_path_office = "../../upload/" . $namefolder;
 // Value SQL SELECT #########################
 
 $slect_data = array();
@@ -340,7 +340,7 @@ $valPic = $mod_path_office . "/" . $row[7];
         function uploadFile() {
 
             var files = document.getElementById("file").files;
-            var locationfile = "../upload/clinic/";
+            var locationfile = "../../upload/clinic/";
 
             if (files.length > 0) {
 

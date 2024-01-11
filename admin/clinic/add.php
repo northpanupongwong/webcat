@@ -282,7 +282,7 @@ include('../lib/session.php');
         function uploadFile() {
 
             var files = document.getElementById("file").files;
-            var locationfile = "../upload/clinic/";
+            var locationfile = "../../upload/clinic/";
 
             if (files.length > 0) {
 

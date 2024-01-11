@@ -177,4 +177,49 @@ function timeFormatReal($DateTime)
    return $timeArr[0] . ":" . $timeArr[1];
 }
 
-
+############################################
+function encodeStr($variable)
+{
+   ############################################
+   $key = "xitgmLwmp";
+   $index = 0;
+   $temp = "";
+   $variable = str_replace("=", "?O", $variable);
+   for ($i = 0; $i < strlen($variable); $i++) {
+      $temp .= $variable[$i] . $key[$index];
+      $index++;
+      if ($index >= strlen($key)) $index = 0;
+   }
+   $variable = strrev($temp);
+   $variable = base64_encode($variable);
+   $variable = utf8_encode($variable);
+   $variable = urlencode($variable);
+   $variable = str_rot13($variable);
+   return $variable;
+}
+############################################
+function decodeStr($enVariable)
+{
+   ############################################
+   $enVariable = str_rot13($enVariable);
+   $enVariable = urldecode($enVariable);
+   $enVariable = utf8_decode($enVariable);
+   $enVariable = base64_decode($enVariable);
+   $enVariable = strrev($enVariable);
+   $current = 0;
+   $temp = "";
+   for ($i = 0; $i < strlen($enVariable); $i++) {
+      if ($current % 2 == 0) {
+         $temp .= $enVariable[$i];
+      }
+      $current++;
+   }
+   $temp = str_replace("?O", "=", $temp);
+   parse_str($temp, $variable);
+   return $temp;
+}
+function txtReplaceHTML($data) {
+   ####################################################
+       $dataHTML = str_replace("\\", "", $data);
+       return $dataHTML;
+   }

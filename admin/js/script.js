@@ -76,6 +76,7 @@ function delContactNew(fileAc) {
 
 function btnBackPage(fileAc) {
     document.myForm.action = fileAc;
+    document.myForm.method = 'POST';
     document.myForm.submit();
  }
 
@@ -128,3 +129,22 @@ function delContactNew(fileAc) {
         }
     });
 }
+
+function openSelectType(fileAc) {
+
+      
+       var TYPE="POST";
+       var URL=fileAc;
+   
+       var dataSet= jQuery("#myForm").serialize();
+   
+           jQuery.ajax({type:TYPE,url:URL,data:dataSet,
+           success:function(html){
+   
+               jQuery("#boxChangeType").show();
+               jQuery("#boxChangeType").html(html);
+               $('.js-example-basic-multiple').select2();
+   
+           }
+       });
+   }

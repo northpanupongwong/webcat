@@ -1,6 +1,7 @@
 :root {
     --color-danger: #ff4961;
     --color-success: #28d094;
+    --color-pass: #002fff;
 }
 
 .fontContantTbEnable {
@@ -13,6 +14,9 @@
 
 .fontContantTbDisable {
     color: var(--color-danger);
+}
+.fontContantTbSuccess {
+    color: var(--color-pass);
 }
 
 .dis-mod {
@@ -44,3 +48,11 @@
 .font-large-2 {
     font-size: 3rem!important;
 }
+.viewEditorTileTxt{
+    line-height:normal;
+    margin-top:-10px;
+    list-style-type: auto;
+    padding:20px;
+
+}
+.viewEditorTileTxt img{width: 100% !important; height: auto !important;}

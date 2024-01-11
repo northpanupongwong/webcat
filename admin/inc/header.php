@@ -48,7 +48,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="javascript:void(0)"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">admin <img
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator <img
                                     src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/users/1.jpg" alt="user" class="img-circle" width="30"></a>
                         </li>
                         <!-- ============================================================== -->

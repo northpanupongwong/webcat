@@ -114,7 +114,7 @@ include('../lib/session.php');
             $module_default_pagesize = 10;
             $module_default_pageshow = 1;
             $module_sort_number = "ASC";
-            $mod_path_office = "../upload/" . $namefolder;
+            $mod_path_office = "../../upload/" . $namefolder;
 
             if ($module_pagesize == "") {
                 $module_pagesize = $module_default_pagesize;
@@ -167,7 +167,7 @@ include('../lib/session.php');
                     <!-- ============================================================== -->
                     <div class="row page-titles">
                         <div class="col-md-5 align-self-center">
-                            <!-- <h4 class="text-themecolor">Table Basic</h4> -->
+                            <h4 class="text-themecolor">โรงพยาบาลสัตว์</h4>
                         </div>
                         <div class="col-md-7 align-self-center text-right">
                             <div class="d-flex justify-content-end align-items-center">
