@@ -14,6 +14,7 @@ if ($_REQUEST['execute'] == "insert") {
 	$update[] = $table . "_address='" . $_POST["Address"] . "'";
 	$update[] = $table . "_tel='" . $_POST["Tel"] . "'";
 	$update[] = $table . "_facebook='" . $_POST["facebook"] . "'";
+	$update[] = $table . "_map='" . $_POST["map"] . "'";
 	$update[] = $table . "_pic='" . $_POST["filename"] . "'";
 	$update[] = $table . "_subject='" . $_POST["Subject"] . "'";
 	$update[] = $table . "_lastdate=NOW()";

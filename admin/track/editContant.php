@@ -35,11 +35,11 @@ $valArea = $row[5];
 $valSpot = $row[6];
 $valPicname = $row[7];
 $valPic = $mod_path_office . "/" . $row[7];
-if (is_file($valPic)) {
-    $valPic = $valPic;
-} else {
-    $valPic = "../assets/images/nopic.png";
-}
+// if (is_file($valPic)) {
+//     $valPic = $valPic;
+// } else {
+//     $valPic = "../assets/images/nopic.png";
+// }
 $valHtml = $path_html . "/" .$row[8];
 $valhtmlname = $row[8];
 
@@ -57,7 +57,7 @@ $valhtmlname = $row[8];
     <title>Webpet Admin Console</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/CATDOG.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Custom CSS -->
     <link href="../dist/css/style.css" rel="stylesheet">

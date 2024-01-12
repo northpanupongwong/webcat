@@ -20,6 +20,7 @@ $slect_data[$table  . "_pic as " . substr("_pic", 1)] = "";
 $slect_data[$table  . "_opentime as " . substr("_opentime", 1)] = "";
 $slect_data[$table  . "_credate as " . substr("_credate", 1)] = "";
 $slect_data[$table  . "_lastdate as " . substr("_lastdate", 1)] = "";
+$slect_data[$table  . "_map as " . substr("_map", 1)] = "";
 
 $sql = "SELECT \n" . implode(",\n", array_keys($slect_data)) . " FROM " . $table;
 $sql .= " WHERE clinic_id = '" . $_REQUEST['selectid'] . "'";
@@ -40,6 +41,8 @@ $valDateCredate = dateFormatReal($row[9]);
 $valTimeCredate = timeFormatReal($row[9]);
 $valPicname = $row[7];
 $valPic = $mod_path_office . "/" . $row[7];
+
+$valMap = $row[11];
 // if (is_file($valPic)) {
 //     $valPic = $valPic;
 // } else {
@@ -59,7 +62,7 @@ $valPic = $mod_path_office . "/" . $row[7];
     <title>Webpet Admin Console</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/CATDOG.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Custom CSS -->
     <link href="../dist/css/style.css" rel="stylesheet">
@@ -271,6 +274,12 @@ $valPic = $mod_path_office . "/" . $row[7];
                                         <div class="col">
                                             <h4>ลิงค์ Facebook : </h4>
                                             <textarea type="text" name="facebook" style="width: 100%;background-color:#ededed" class="form-control border border-4 rounded"><?php echo $valFacebook ?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col">
+                                            <h4>ลิงค์ Map : </h4>
+                                            <textarea type="text" name="map" style="width: 100%;background-color:#ededed" class="form-control border border-4 rounded"><?php echo $valMap ?></textarea>
                                         </div>
                                     </div>
 

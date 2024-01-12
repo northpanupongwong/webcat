@@ -218,8 +218,45 @@ function decodeStr($enVariable)
    parse_str($temp, $variable);
    return $temp;
 }
-function txtReplaceHTML($data) {
+function txtReplaceHTML($data)
+{
    ####################################################
-       $dataHTML = str_replace("\\", "", $data);
-       return $dataHTML;
-   }
+   $dataHTML = str_replace("\\", "", $data);
+   return $dataHTML;
+}
+
+function getHospital()
+{
+   ############################################
+   global $coreLanguageSQL;
+   $tb_clinic = "clinic";
+   $sql = "SELECT " . $tb_clinic . "_id FROM " . $tb_clinic . " WHERE " . $tb_clinic . "_status='Enable'";
+   //print_pre($sql);
+   $Query = QueryDB($coreLanguageSQL, $sql);
+   $RecordCount = NumRowsDB($coreLanguageSQL, $Query);
+   return ($RecordCount);
+}
+
+function getHelp()
+{
+   ############################################
+   global $coreLanguageSQL;
+   $tb_help = "track";
+   $sql = "SELECT " . $tb_help . "_id FROM " . $tb_help . " WHERE " . $tb_help . "_status != 'Disable'";
+   //print_pre($sql);
+   $Query = QueryDB($coreLanguageSQL, $sql);
+   $RecordCount = NumRowsDB($coreLanguageSQL, $Query);
+   return ($RecordCount);
+}
+
+function getHelpSuccess()
+{
+   ############################################
+   global $coreLanguageSQL;
+   $tb_help = "track";
+   $sql = "SELECT " . $tb_help . "_id FROM " . $tb_help . " WHERE " . $tb_help . "_status = 'Success'";
+   //print_pre($sql);
+   $Query = QueryDB($coreLanguageSQL, $sql);
+   $RecordCount = NumRowsDB($coreLanguageSQL, $Query);
+   return ($RecordCount);
+}

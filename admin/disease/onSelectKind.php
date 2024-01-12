@@ -26,7 +26,7 @@ $sql_cat = $sql_cat . "  ORDER BY " . $table_symptom . "_id DESC  ";
         $row_catid = $row_cat[0];
         $row_catname = $row_cat[1];
     ?>
-        <option value="<?php echo $row_catid ?>" <?php  if(in_array($row_catid, $data_check_typeid)){ ?> selected="selected" <?php  }?>><?php echo $row_catname ?></option>
+        <option value="<?php echo $row_catid ?>"><?php echo $row_catname ?></option>
     <?php  } ?>
 
 </select>

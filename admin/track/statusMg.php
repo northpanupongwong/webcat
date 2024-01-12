@@ -21,7 +21,13 @@ if ($statusname == "Approve") {
 
 
 $sql = "UPDATE " . $tablename . " SET "
-    . $tablename . "_status= '$inputstatusname'  WHERE " . $tablename . "_id='" . $statusid . "'";
+    . $tablename . "_status= '$inputstatusname' ";
+
+if ($statusname == "Success"){
+    $sql .= ",". $tablename . "_lastdate= NOW() ";
+}
+
+$sql .= " WHERE " . $tablename . "_id='" . $statusid . "'";
 $Query = QueryDB($coreLanguageSQL, $sql);
 
 

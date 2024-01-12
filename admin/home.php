@@ -4,6 +4,9 @@ include("./lib/function.php");
 include("./lib/session.php");
 include("./lib/checkMember.php");
 include('./lib/connect.php');
+$valNumClinic = getHospital();
+$valNumHelp = getHelp();
+$valNumHelpSuccess = getHelpSuccess();
 
 ?>
 <!DOCTYPE html>
@@ -20,7 +23,7 @@ include('./lib/connect.php');
     <title>Webpet Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/CATDOG.png">
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="./assets/node_modules/morrisjs/morris.css" rel="stylesheet">
@@ -109,7 +112,7 @@ include('./lib/connect.php');
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
-                                            <h3 class="primary">278</h3>
+                                            <h3 class="primary"><?php echo $valNumClinic ?></h3>
                                             <span>โรงพยาบาลสัตว์</span>
                                         </div>
                                         <div class="align-self-center">
@@ -129,7 +132,7 @@ include('./lib/connect.php');
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
-                                            <h3 class="warning">156</h3>
+                                            <h3 class="warning"><?php echo $valNumHelp ?></h3>
                                             <span>ประกาศขอความช่วยเหลือ</span>
                                         </div>
                                         <div class="align-self-center">
@@ -150,7 +153,7 @@ include('./lib/connect.php');
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
-                                            <h3 class="success">64.89 %</h3>
+                                            <h3 class="success"><?php echo $valNumHelpSuccess ?></h3>
                                             <span>ช่วยเหลือสำเร็จ</span>
                                         </div>
                                         <div class="align-self-center">
@@ -158,7 +161,7 @@ include('./lib/connect.php');
                                         </div>
                                     </div>
                                     <div class="progress mt-1 mb-0" style="height: 7px;">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 64.89%" aria-valuenow="64.89" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>

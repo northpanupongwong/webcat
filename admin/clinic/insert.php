@@ -14,6 +14,7 @@ if ($_REQUEST['execute'] == "insert") {
 		$insert[$table."_address"] = "'".($_REQUEST['Address'])."'";
 		$insert[$table."_tel"] = "'".($_REQUEST['Tel'])."'";
 		$insert[$table."_facebook"] = "'".($_REQUEST['facebook'])."'";
+		$insert[$table."_map"] = "'".($_REQUEST['map'])."'";
 		$insert[$table."_pic"] = "'".($_REQUEST['filename'])."'";
 		$insert[$table."_credate"] = "NOW()";
 		$insert[$table."_lastdate"] = "NOW()";

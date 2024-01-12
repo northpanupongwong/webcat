@@ -1,87 +1,52 @@
 <footer class="layout-footer">
     <div class="f-content lazy" data-src="<?php echo $core_template; ?>assets/img/background/bg-home.png">
         <div class="container-xl">
-            <div class="f-info">
-                <h2 class="h-title typo-xxl fw-bold mb-3">
-                    ผู้ดูแลระบบ
-                </h2>
-                <div class="contact">
-                    <div class="row gy-3">
-                    <div class="col-2">
-                        </div>
-                        <div class="col-3 text-center">
-                            <img src="<?php echo $core_template; ?>assets/img/static/profile.png" />
-                        </div>
-                        <div class="col-md col-5">
-                            <div class="row align-items-start gx-0">
-                                <div class="col-sm-auto">
-                                    <div class="c-label fw-bold">
-                                        ชื่อ:
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="desc">
-                                        นางสาวลักษิกา สามลทาคณะ
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row align-items-start gx-0">
-                                <div class="col-sm-auto">
-                                    <div class="c-label fw-bold">
-                                        คณะ:
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="desc">
-                                        คอมพิวเตอร์และเทคโนโลยีสารสนเทศ สาขาวิชาวิทยาการคอมพิวเตอร์
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row align-items-start gx-0">
-                                <div class="col-sm-auto">
-                                    <div class="c-label fw-bold">
-                                        Email:
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="desc">
-                                        621463024@crru.ac.th
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row align-items-start gx-0">
-                                <div class="col-sm-auto">
-                                    <div class="c-label fw-bold">
-                                        โทรศัพท์:
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="desc">
-                                        092-332-6999
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                            <div class="row align-items-center gx-2">
-                                <div class="col-auto">
-                                    <div class="label fw-bold">
-                                        Follow us:
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <?php include('components/social.php'); ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                        </div>
+            <div class="sitemap">
+                <h3 class="title fw-bold typo-md mb-4">แผนผังเว็บไซต์</h3>
+                <div class="row gy-md-5 gy-4">
+                    <div class="col-md-3 col-sm-4 col-12">
+                    <a href="index.php" class="link typo-xxs" title=""><h4 class="subtitle fw-bold typo-default mb-2">หน้าหลัก</h4></a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-12">
+                    <a href="announce.php" class="link typo-xxs" title=""><h4 class="subtitle fw-bold typo-default mb-2">ประกาศข่าวสาร</h4></a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-12">
+                    <a href="" class="link typo-xxs" title=""><h4 class="subtitle fw-bold typo-default mb-2">วิเคราะห์โรค</h4></a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-12">
+                        <a href="help.php" class="link typo-xxs" title="">
+                            <h4 class="subtitle fw-bold typo-default mb-2">ขอความช่วยเหลือ</h4>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-12">
+                        <h4 class="subtitle fw-bold typo-default mb-2">ข้อมูลสัตว์</h4>
+                        <ul class="item-list fluid">
+                            <li>
+                                <a href="race-dog.php" class="link typo-xxs" title="">สายพันธุ์สุนัข</a>
+                            </li>
+                            <li>
+                                <a href="disease-dog.php" class="link typo-xxs" title="">โรคภัยในสุนัข</a>
+                            </li>
+                            <li>
+                                <a href="race-cat.php" class="link typo-xxs" title="">สายพันธุ์แมว</a>
+                            </li>
+                            <li>
+                                <a href="disease-cat.php" class="link typo-xxs" title="">โรคภัยในแมว</a>
+                            </li>
+                            <li>
+                                <a href="clinic.php" class="link typo-xxs" title="">คลินิกรักษาสัตว์</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-4 col-12">
+                        <a href="contact.php" class="link typo-xxs" title="">
+                            <h4 class="subtitle fw-bold typo-default mb-2">ติดต่อเรา</h4>
+                        </a>
 
-                        
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 

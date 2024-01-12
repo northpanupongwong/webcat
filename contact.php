@@ -15,7 +15,7 @@
 
         <section class="layout-container ">
 
-            <div class="default-header">
+            <!-- <div class="default-header">
                 <div class="wrapper">
                     <div class="container">
                         <div class="title  text-center">Web development Pet Tracking</div>
@@ -30,162 +30,110 @@
                     <img class="img-cover" src="<?php echo $core_template; ?>assets/img/background/bg-home.png"  alt="bg-home">
                 </figure>
 
-            </div>
+            </div> -->
 
-            <div class="student-page" style="margin: 6rem 0;">
-            <div class="information-system">
+            <div class="contact-page" style="margin: 6rem 0;">
+                <div class="information-system">
                     <div class="container-xl">
-                        <div class="card-block">
-                            <div class="row g-lg-4 g-3">
-                                <div class="col-xxl-4 col-sm-6">
-                                    <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
-                                            <div class="thumbnail">
-                                                <figure class="cover">
-                                                    <img class="img-cover lazy loaded" alt="H-img1" src="assets/img/upload/H-img1.png">
-                                                </figure>
-                                            </div>
-                                            <div class="title-bottom">
-                                                <div class="row align-items-center gutters-10">
-                                                    <div class="col">
-                                                        <div class="card-txt text-limit -x2">ข้อมูลสายพันธุ์ของสุนัขและพฤติกรรมของสุนัข</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <span class="material-symbols-rounded">chevron_right</span>
-                                                    </div>
-                                                </div>
-                                                <div class="desc typo-default fw-normal">
-                                                </div>
-                                            </div>
-                                        </a>
+                        <div class="contact-info">
+                            <div class="row gx-md-5">
+                                <div class="col">
+                                    <div class="text-brand text-uppercase text-center">
+                                        <h3 class="title typo-xxl text-primary">
+                                            <strong>
+                                                ติดต่อเรา
+                                            </strong>
+                                        </h3>
+                                        <img src="<?php echo $core_template; ?>assets/img/static/CATDOG.png" style="max-height:150px" alt="profile" />
                                     </div>
                                 </div>
-                                <div class="col-xxl-4 col-sm-6">
-                                    <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
-                                            <div class="thumbnail">
-                                                <figure class="cover">
-                                                    <img class="img-cover lazy loaded" alt="H-img2" src="assets/img/upload/H-img2.png">
-                                                </figure>
-                                            </div>
-                                            <div class="title-bottom">
-                                                <div class="row align-items-center gutters-10">
-                                                    <div class="col">
-                                                        <div class="card-txt text-limit -x2">โรคต่างๆที่เกิดในสุนัข</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <span class="material-symbols-rounded">chevron_right</span>
-                                                    </div>
-                                                </div>
-                                                <div class="desc typo-default fw-normal">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                        <div class="row gx-md-5">
+                            <div class="col-md-auto">
+                                <div class="brand">
+                                    <img src="<?php echo $core_template; ?>assets/img/static/profiles.png" style="min-height:350px" alt="profile" />
                                 </div>
-                                <div class="col-xxl-4 col-sm-6">
-                                    <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
-                                            <div class="thumbnail">
-                                                <figure class="cover">
-                                                    <img class="img-cover lazy loaded" alt="H-img3" src="assets/img/upload/H-img3.png">
-                                                </figure>
-                                            </div>
-                                            <div class="title-bottom">
-                                                <div class="row align-items-center gutters-10">
-                                                    <div class="col">
-                                                        <div class="card-txt text-limit -x2">ข้อมูลสายพันธุ์ของแมวและพฤติกรรมของแมว</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <span class="material-symbols-rounded">chevron_right</span>
-                                                    </div>
-                                                </div>
-                                                <div class="desc typo-default fw-normal">
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                            </div>
+                            <div class="col pt-5">
+                                <div class="text-brand text-uppercase">
+                                    <h3 class="title typo-xxl text-primary">
+                                        <strong>
+                                            ผู้ดูแลระบบ
+                                        </strong>
+                                    </h3>
+                                    <h4 class="subtitle typo-xl text-secondary">
+                                        <strong>
+                                            นางสาวลักษิกา สามลทาคณะ
+                                        </strong>
+                                    </h4>
                                 </div>
-                                <div class="col-xxl-4 col-sm-6">
-                                    <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
-                                            <div class="thumbnail">
-                                                <figure class="cover">
-                                                    <img class="img-cover lazy loaded" alt="H-img4" src="assets/img/upload/H-img4.png">
-                                                </figure>
-                                            </div>
-                                            <div class="title-bottom">
-                                                <div class="row align-items-center gutters-10">
-                                                    <div class="col">
-                                                        <div class="card-txt text-limit -x2">โรคต่างๆที่เกิดในแมว</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <span class="material-symbols-rounded">chevron_right</span>
-                                                    </div>
-                                                </div>
-                                                <div class="desc typo-default fw-normal">
+                                <div class="row gy-3 pt-4">
+                                    <div class="col-12">
+                                        <div class="row align-items-start gx-0">
+                                            <div class="col-sm-auto">
+                                                <div class="c-label fw-bold">
+                                                    คณะ:
                                                 </div>
                                             </div>
-                                        </a>
+                                            <div class="col">
+                                                <div class="desc">
+                                                    คอมพิวเตอร์และเทคโนโลยีสารสนเทศ สาขาวิชาวิทยาการคอมพิวเตอร์
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xxl-4 col-sm-6">
-                                    <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
-                                            <div class="thumbnail">
-                                                <figure class="cover">
-                                                    <img class="img-cover lazy loaded" alt="H-img5" src="assets/img/upload/H-img5.png">
-                                                </figure>
-                                            </div>
-                                            <div class="title-bottom">
-                                                <div class="row align-items-center gutters-10">
-                                                    <div class="col">
-                                                        <div class="card-txt text-limit -x2">คลินิกรักษาสัตว์และร้านขายอาหารสัตว์</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <span class="material-symbols-rounded">chevron_right</span>
-                                                    </div>
-                                                </div>
-                                                <div class="desc typo-default fw-normal">
+                                    <div class="col-12">
+                                        <div class="row align-items-start gx-0">
+                                            <div class="col-sm-auto">
+                                                <div class="c-label fw-bold">
+                                                    Email:
                                                 </div>
                                             </div>
-                                        </a>
+                                            <div class="col">
+                                                <div class="desc">
+                                                    <a href="mailto:621463024@crru.ac.th" class="link" title="">621463024@crru.ac.th</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xxl-4 col-sm-6">
-                                    <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
-                                            <div class="thumbnail">
-                                                <figure class="cover">
-                                                    <img class="img-cover lazy loaded" alt="H-img6" src="assets/img/upload/H-img6.png">
-                                                </figure>
-                                            </div>
-                                            <div class="title-bottom">
-                                                <div class="row align-items-center gutters-10">
-                                                    <div class="col">
-                                                        <div class="card-txt text-limit -x2">การคุมกำเนิด</div>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <span class="material-symbols-rounded">chevron_right</span>
-                                                    </div>
-                                                </div>
-                                                <div class="desc typo-default fw-normal">
+                                    <div class="col-md col-12">
+                                        <div class="row align-items-start gx-0">
+                                            <div class="col-sm-auto">
+                                                <div class="c-label fw-bold">
+                                                    โทรศัพท์:
                                                 </div>
                                             </div>
-                                        </a>
+                                            <div class="col">
+                                                <div class="desc">
+                                                    <a href="tel:092 332 6999" class="link" title="">092-332-6999</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row align-items-center gx-0 pt-sm-4">
+                                            <div class="col-auto">
+                                                <div class="c-label fw-bold">
+                                                    Follow us:
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <?php include('inc/components/social.php'); ?>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+    </div>
 
-        </section>
+    </section>
 
 
-        <?php include('inc/footer.php'); ?>
+    <?php include('inc/footer.php'); ?>
     </div>
 
     <?php include('inc/loadscript.php'); ?>

@@ -17,12 +17,8 @@
             <div class="default-header">
                 <div class="wrapper">
                     <div class="container">
-                        <div class="title  text-center">Web development Pet Tracking</div>
-                        <div class="text-center txt-desc" style="color: white;line-height: 1.5rem;">สำหรับผู้เลี้ยงสุนัขและแมวมือใหม่ที่คิดจะเลี้ยงสุนัขและแมว อาจจะไม่สามารถแยกสายพันธุ์ของสุนัขและแมวได้ 
-                        ไม่ทราบปัญหาเกี่ยวกับวิธีการเลี้ยงดูของสัตว์เลี้ยง และนิสัยของสุนัขและแมวแต่ละสายพันธุ์ ทำให้เกิดปัญหามากมายเกี่ยวกับสุขภาพของสุนัขและแมว 
-                        ทำให้สุนัขและแมวมีอายุที่สั้นลงหรือถูกเลี้ยงแบบผิดวิธี ดังนั้นจึงพัฒนาเว็บแอปพลิเคชันเพื่อรวบรวมข้อมูลการเลี้ยงสุนัขและแมวและการให้คำแนะนำเกี่ยวกับอาการของสุนัขและแมว 
-                        และประเมินอาการเบื้องต้นเมื่อสุนัขและแมวมีอาการผิดปกติ เพื่อที่จะได้รับการดูแลที่ถูกวิธีและทำให้สุนัขและแมวมีอายุที่ยืนยาวมากขึ้น รวมทั้งสามารถหาคลินิครักษาสัตว์ ร้านอาหารที่ใกล้บ้าน 
-                        และสามารถตามหาสุนัขและแมวในกรณีสูญหายได้</div>
+                        <div class="title  text-center">Pet Tracking</div>
+                        <div class="text-center txt-desc" style="color: white;line-height: 1.5rem;">เว็บไซต์ช่วยเหลือและให้ข้อมูลสำหรับผู้เลี้ยงดูสุนัขและแมว อาจจะไม่สามารถแยกสายพันธุ์ของสุนัขและแมวได้ ไม่ทราบปัญหาเกี่ยวกับวิธีการเลี้ยงดูของสัตว์เลี้ยง และนิสัยของสุนัขและแมวแต่ละสายพันธุ์ ทำให้เกิดปัญหามากมายเกี่ยวกับสุขภาพของสุนัขและแมว ทำให้สุนัขและแมวมีอายุที่สั้นลงหรือถูกเลี้ยงแบบผิดวิธี ดังนั้นจึงพัฒนาเว็บแอปพลิเคชันเพื่อรวบรวมข้อมูลการเลี้ยงสุนัขและแมวและการให้คำแนะนำเกี่ยวกับอาการของสุนัขและแมว และประเมินอาการเบื้องต้นเมื่อสุนัขและแมวมีอาการผิดปกติ เพื่อที่จะได้รับการดูแลที่ถูกวิธีและทำให้สุนัขและแมวมีอายุที่ยืนยาวมากขึ้น รวมทั้งสามารถหาคลินิครักษาสัตว์ และสามารถตามหาสุนัขและแมวในกรณีสูญหายได้</div>
                     </div>
                 </div>
                 <figure class="cover">
@@ -47,7 +43,7 @@
                                             <div class="title-bottom">
                                                 <div class="row align-items-center gutters-10">
                                                     <div class="col">
-                                                        <div class="card-txt text-limit -x2">ข้อมูลสายพันธุ์ของสุนัขและพฤติกรรมของสุนัข</div>
+                                                        <div class="card-txt text-limit -x2">ข้อมูลสายพันธุ์ของสุนัข</div>
                                                     </div>
                                                     <div class="col-auto">
                                                         <span class="material-symbols-rounded">chevron_right</span>
@@ -93,7 +89,7 @@
                                             <div class="title-bottom">
                                                 <div class="row align-items-center gutters-10">
                                                     <div class="col">
-                                                        <div class="card-txt text-limit -x2">ข้อมูลสายพันธุ์ของแมวและพฤติกรรมของแมว</div>
+                                                        <div class="card-txt text-limit -x2">ข้อมูลสายพันธุ์ของแมว</div>
                                                     </div>
                                                     <div class="col-auto">
                                                         <span class="material-symbols-rounded">chevron_right</span>
@@ -139,7 +135,7 @@
                                             <div class="title-bottom">
                                                 <div class="row align-items-center gutters-10">
                                                     <div class="col">
-                                                        <div class="card-txt text-limit -x2">คลินิกรักษาสัตว์และร้านขายอาหารสัตว์</div>
+                                                        <div class="card-txt text-limit -x2">คลินิกรักษาสัตว์</div>
                                                     </div>
                                                     <div class="col-auto">
                                                         <span class="material-symbols-rounded">chevron_right</span>
@@ -153,7 +149,7 @@
                                 </div>
                                 <div class="col-xxl-4 col-sm-6">
                                     <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
+                                        <a href="help.php" class="link">
                                             <div class="thumbnail">
                                                 <figure class="cover">
                                                     <img class="img-cover lazy loaded" alt="H-img6" src="assets/img/upload/H-img6.png">
@@ -162,7 +158,7 @@
                                             <div class="title-bottom">
                                                 <div class="row align-items-center gutters-10">
                                                     <div class="col">
-                                                        <div class="card-txt text-limit -x2">การคุมกำเนิด</div>
+                                                        <div class="card-txt text-limit -x2">ขอความช่วยเหลือ</div>
                                                     </div>
                                                     <div class="col-auto">
                                                         <span class="material-symbols-rounded">chevron_right</span>

@@ -55,7 +55,7 @@ $valHtml = $path_html . "/" .$row[8];
     <title>Webpet Admin Console</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/CATDOG.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Custom CSS -->
     <link href="../dist/css/style.css" rel="stylesheet">

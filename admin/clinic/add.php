@@ -19,7 +19,7 @@ include('../lib/session.php');
     <title>Webpet Admin Console</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/CATDOG.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Custom CSS -->
     <link href="../dist/css/style.css" rel="stylesheet">
@@ -223,6 +223,12 @@ include('../lib/session.php');
                                         <div class="col">
                                             <h4>ลิงค์ Facebook :</h4>
                                             <textarea type="text" name="facebook" style="width: 100%;background-color:#ededed" class="form-control border border-4 rounded"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col">
+                                            <h4>ลิงค์ Map :</h4>
+                                            <textarea type="text" name="map" style="width: 100%;background-color:#ededed" class="form-control border border-4 rounded"></textarea>
                                         </div>
                                     </div>
 

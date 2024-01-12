@@ -21,6 +21,7 @@ $slect_data[$table  . "_opentime as " . substr("_opentime", 1)] = "";
 $slect_data[$table  . "_credate as " . substr("_credate", 1)] = "";
 $slect_data[$table  . "_lastdate as " . substr("_lastdate", 1)] = "";
 $slect_data[$table_pro  . "_name as " . substr("_name", 1)] = "";
+$slect_data[$table  . "_map as " . substr("_map", 1)] = "";
 
 $sql = "SELECT \n" . implode(",\n", array_keys($slect_data)) . " FROM " . $table ." INNER JOIN ".$table_pro." ON ".$table.".".$table."_province = ".$table_pro.".".$table_pro."_id";
 $sql .= " WHERE clinic_id = '" . $_REQUEST['selectid'] . "'";
@@ -39,7 +40,7 @@ $valFacebook = $row[6];
 $valOpen = $row[8];
 $valDateCredate = dateFormatReal($row[9]);
 $valTimeCredate = timeFormatReal($row[9]);
-
+$valMap = $row[12];
 $valPic = $mod_path_office . "/" . $row[7];
 if (is_file($valPic)) {
     $valPic = $valPic;
@@ -60,7 +61,7 @@ if (is_file($valPic)) {
     <title>Webpet Admin Console</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/elegant-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/CATDOG.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Custom CSS -->
     <link href="../dist/css/style.css" rel="stylesheet">
@@ -248,6 +249,12 @@ if (is_file($valPic)) {
                                         <div class="col">
                                             <h4>ลิงค์ Facebook : </h4>
                                             <textarea disabled type="text" name="facebook" style="width: 100%;background-color:#ededed" class="form-control border border-4 rounded"><?php echo $valFacebook ?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col">
+                                            <h4>ลิงค์ Map : </h4>
+                                            <textarea disabled type="text" name="map" style="width: 100%;background-color:#ededed" class="form-control border border-4 rounded"><?php echo $valMap ?></textarea>
                                         </div>
                                     </div>
 

@@ -987,10 +987,10 @@
 }
 
 :root {
-  --color-primary: #ffffff;
-  --color-primary-100: #fefe2f;
+  --color-primary: #5637b8;
+  --color-primary-100: #c76bd7;
   --color-primary-200: #fbf2ff;
-  --color-secondary: #f2ff01;
+  --color-secondary: #996600;
   --color-secondary-100: #cb9709;
   --color-secondary-200: #fdc703;
   --color-secondary-300: #fffbef;
@@ -2475,7 +2475,7 @@ div.swal2-html-container {
   border-top-color: var(--color-border);
 }
 .layout-header .navbar .dropdown-item {
-  color: var(--color-primary);
+  color: var(--color-dark);
   font-size: var(--typo-xxs);
   font-weight: var(--fw-medium);
   padding: 0.75rem 2rem;
@@ -2521,15 +2521,14 @@ div.swal2-html-container {
 .layout-header .navbar-brand {
   position: relative;
   width: 136px;
-  height: 140px;
+  height: 150px;
   margin-right: 2rem;
   margin-bottom: -80px;
-  background: #565656;
   padding: 12px 24px 0 24px;
   z-index: 1;
   transition: all 200ms ease;
 }
-.layout-header .navbar-brand::before {
+/* .layout-header .navbar-brand::before {
   content: "";
   position: absolute;
   bottom: -60px;
@@ -2541,9 +2540,9 @@ div.swal2-html-container {
   border-top: 60px solid #565656;
   z-index: -1;
   transition: all 200ms ease;
-}
+} */
 .layout-header .nav-link {
-  color: var(--color-primary);
+  color: var(--color-dark);
   font-size: var(--typo-default);
   font-weight: var(--fw-medium);
   border-radius: 50rem;
@@ -2557,7 +2556,7 @@ div.swal2-html-container {
 .layout-header .navbar-nav .nav-link.active {
   color: var(--color-dark);
   padding: 0.7rem 1.25rem;
-  background: linear-gradient(var(--color-primary) 0%, var(--color-primary) 100%);
+  background: var(--color-light);
 }
 .layout-header .navbar-nav .nav-link.show {
   color: var(--color-secondary);
@@ -2710,7 +2709,7 @@ div.swal2-html-container {
 }
 @media (min-width: 1441px) {
   .layout-header .navbar .dropdown-menu {
-    top: 66px !important;
+    top: 53px !important;
   }
   .layout-header.tiny .navbar-brand {
     margin-bottom: calc(-80px + 2rem);
@@ -2727,12 +2726,6 @@ div.swal2-html-container {
     width: 140px;
     height: 140px;
     margin-right: 1.5rem;
-  }
-  .layout-header .navbar-brand::before {
-    border-left-width: 70px;
-    border-right-width: 70px;
-    border-top-width: 50px;
-    bottom: -50px;
   }
   .layout-header .navbar-nav .nav-item + .nav-item {
     margin-left: 0;
@@ -2758,12 +2751,6 @@ div.swal2-html-container {
     margin-top: -0.75rem;
     margin-bottom: -48px;
     margin-right: 0;
-  }
-  .layout-header .navbar-brand::before {
-    border-left-width: 50px;
-    border-right-width: 50px;
-    border-top-width: 30px;
-    bottom: -29px;
   }
   .layout-header .navbar-collapse {
     background-color: black;
@@ -2842,12 +2829,6 @@ div.swal2-html-container {
     padding: 4px 16px 0 16px;
     margin-bottom: -32px;
   }
-  .layout-header .navbar-brand::before {
-    border-left-width: 42px;
-    border-right-width: 42px;
-    border-top-width: 22px;
-    bottom: -22px;
-  }
   .layout-header .navbar-collapse {
     padding-top: 50px;
   }
@@ -2866,12 +2847,6 @@ div.swal2-html-container {
     padding-right: 15px;
     margin-bottom: -32px;
   }
-  .layout-header .navbar-brand::before {
-    border-left-width: 40px;
-    border-right-width: 40px;
-    border-top-width: 20px;
-    bottom: -20px;
-  }
   .menu-mobile-btn {
     width: 26px;
     height: 21px;
@@ -2885,10 +2860,6 @@ div.swal2-html-container {
     padding-left: 12px;
     padding-right: 12px;
     margin-bottom: -20px;
-  }
-  .layout-header .navbar-brand::before {
-    border-left-width: 32px;
-    border-right-width: 32px;
   }
   .layout-header .navbar-collapse {
     padding-top: 32px;
@@ -3454,7 +3425,7 @@ div.swal2-html-container {
   padding-bottom: 1.75rem;
 }
 .download-block .file-box .wrapper .inner {
-  border-top: 1px solid #f3f2ff;
+  border-top: 1px solid #fbf2ff;
   padding-top: 1rem;
 }
 .download-block .file-box .wrapper .inner .item-list li {
