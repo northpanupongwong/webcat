@@ -26,6 +26,7 @@
 
 <!-- Custom -->
 <script src="<?php echo $core_template; ?>assets/js/main.js<?= $modify ?>"></script>
+<script src="<?php echo $core_template; ?>lib/js/script.js<?= $modify ?>"></script>
 
 <script type="text/javascript">
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;

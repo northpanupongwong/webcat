@@ -1,4 +1,5 @@
 <aside class="left-sidebar">
+<div id="loadCheckComplete"></div>
             <div class="d-flex no-block nav-text-box align-items-center">
                 <span><img style="height: 50px;" src="<? if(!empty($Cfolder)){ echo $Cfolder ;} ?>./assets/images/CATDOG.png" alt="CATDOG"></span>
                 <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i
@@ -42,8 +43,9 @@
                         <li> <a class="waves-effect waves-dark" href="pages-error-404.php" aria-expanded="false"><i
                                     class="fa fa-question-circle"></i><span class="hide-menu"></span>404</a></li> -->
                         <div class="text-center m-t-30">
+                            <? $lglink = "http://".$_SERVER['HTTP_HOST']."/webcat/admin/logout.php"; ?>
                             <a href="#"
-                                class="btn waves-effect waves-light btn-success hidden-md-down" onclick="checkLogoutUser()"> log out</a>
+                                class="btn waves-effect waves-light btn-success hidden-md-down" onclick="checkLogoutUser('<? echo $lglink ?>')"> log out</a>
                         </div>
                     </ul>
                 </nav>

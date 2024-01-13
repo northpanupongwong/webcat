@@ -93,3 +93,136 @@ function getProvince($valProvince = null)
    $Query = QueryDB($coreLanguageSQL, $sql);
    return ($Query);
 }
+
+function get_real_ip()
+{
+   ############################################
+   $ip = false;
+   if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+      $ip = $_SERVER['HTTP_CLIENT_IP'];
+   }
+   if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+      $ips = explode(", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+      if ($ip) {
+         array_unshift($ips, $ip);
+         $ip = false;
+      }
+      for ($i = 0; $i < count($ips); $i++) {
+         if (!preg_match("/^(10|172\.16|192\.168)\./i", $ips[$i])) {
+            if (version_compare(phpversion(), "5.0.0", ">=")) {
+               if (ip2long($ips[$i]) != false) {
+                  $ip = $ips[$i];
+                  break;
+               }
+            } else {
+               if (ip2long($ips[$i]) != -1) {
+                  $ip = $ips[$i];
+                  break;
+               }
+            }
+         }
+      }
+   }
+   return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
+}
+
+############################################
+
+function _getURL()
+{
+   ############################################
+   $Parameter = (strlen($_SERVER["QUERY_STRING"]) > 0) ? "?" . $_SERVER["QUERY_STRING"] : "";
+   return 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER["PHP_SELF"] . $Parameter; #$_SERVER['REQUEST_URI'];
+}
+
+
+function logs_access($actionType)
+{
+   global $db;
+
+   $core_tb_log = "logs";
+   $core_pathname_logs = "../../logs";
+   $CurrentPath = $core_pathname_logs . "";
+   if (!is_dir($CurrentPath)) {
+      mkdir($CurrentPath, 0777);
+   }
+
+   $myDateNow = date("Y-m-d");
+   $myTimeNow = date("H:i:s");
+
+   ## section logs ##
+   if (!is_dir($CurrentPath . "/access-action")) {
+      mkdir($CurrentPath . "/access-action", 0777);
+   } # ÊÃéÒ§ path
+
+   $logsfile = $CurrentPath . "/access-action/" . $myDateNow . ".logs";
+
+   if (!is_file($logsfile)) {
+      $fp = @fopen($logsfile, 'w+');
+      fwrite($fp, $actionType . "|:|" . session_id() . "|:|" . _getURL() . "|:|" . get_real_ip() . "|:|" . $myDateNow . " " . $myTimeNow . "\n");
+      fclose($fp);
+      chmod($logsfile, 0666);
+   } else {
+      $fp = @fopen($logsfile, 'a');
+      fwrite($fp, $actionType . "|:|" . session_id() . "|:|" . _getURL() . "|:|" . get_real_ip() . "|:|" . $myDateNow . " " . $myTimeNow . "\n");
+      fclose($fp);
+   }
+
+
+   /* ################## Start Insert Access User DB ########################## */
+
+   $insert[$core_tb_log . "_action"] = "'" . $actionType . "'";
+   $insert[$core_tb_log . "_sessid"] = "'" . session_id() . "'";
+   $insert[$core_tb_log . "_ip"] = "'" . get_real_ip() . "'";
+   $insert[$core_tb_log . "_time"] = "NOW()";
+   $insert[$core_tb_log . "_type"] = "'Access Menu'";
+
+   $insert[$core_tb_log . "_url"] = "'" . _getURL() . "'";
+
+
+   $sqlLog = "INSERT INTO " . $core_tb_log . "(" . implode(",", array_keys($insert)) . ") VALUES (" . implode(",", array_values($insert)) . ")";
+   $queryLog = $db->Execute($sqlLog);
+
+   /* ################## End Insert Access User DB ########################## */
+}
+
+function encodeStr($variable)
+{
+   ############################################
+   $key = "xitgmLwmp";
+   $index = 0;
+   $temp = "";
+   $variable = str_replace("=", "?O", $variable);
+   for ($i = 0; $i < strlen($variable); $i++) {
+      $temp .= $variable[$i] . $key[$index];
+      $index++;
+      if ($index >= strlen($key)) $index = 0;
+   }
+   $variable = strrev($temp);
+   $variable = base64_encode($variable);
+   $variable = utf8_encode($variable);
+   $variable = urlencode($variable);
+   $variable = str_rot13($variable);
+   return $variable;
+}
+############################################
+function decodeStr($enVariable)
+{
+   ############################################
+   $enVariable = str_rot13($enVariable);
+   $enVariable = urldecode($enVariable);
+   $enVariable = utf8_decode($enVariable);
+   $enVariable = base64_decode($enVariable);
+   $enVariable = strrev($enVariable);
+   $current = 0;
+   $temp = "";
+   for ($i = 0; $i < strlen($enVariable); $i++) {
+      if ($current % 2 == 0) {
+         $temp .= $enVariable[$i];
+      }
+      $current++;
+   }
+   $temp = str_replace("?O", "=", $temp);
+   parse_str($temp, $variable);
+   return $temp;
+}

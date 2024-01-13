@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include('lib/connect.php'); ?>
+<?php include('lib/connect.php');include('lib/session.php'); ?>
 <html lang="en">
 <?php
 

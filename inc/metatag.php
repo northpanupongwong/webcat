@@ -1,4 +1,6 @@
-<?php $core_template = "";?>
+<?php
+ $core_template = "";
+ ?>
 
 <title>Pet Track</title>
 <meta charset="utf-8">

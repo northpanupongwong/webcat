@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include('lib/connect.php'); ?>
+<?php include('lib/connect.php');include('lib/session.php'); ?>
 <html lang="en">
 <?php
 
@@ -137,8 +137,15 @@ $count_record = NumRowsDB($coreLanguageSQL, $query);
                         <div class="container-xl">
                             <div class="row" style="margin-bottom: 1.5rem;">
                                 <!-- column -->
-                                <div class="col-3"></div>
-                                <div class="col-4">
+                                <div class="col"></div>
+                                <? if ($_SESSION['core_session_flogout'] >= 1) { ?><div class="col-2 ">
+                                    <button type="button" onClick="location.href='clinic-form.php'" class="btn shadow-lg float-end" style="background-color: #ffff;height:38px;min-width:auto;line-height:0;border-radius:5px">
+                                        <i class="fa fa-plus-square" style="color: green;"></i>
+                                        <span style="font-size: 1rem;">เพิ่มข้อมูล</span>
+                                    </button>
+                                </div>
+                                <? } ?>
+                                <div class="col-3">
                                 
                                     <div class="form-group">
                                         <select name="group" id="group" onchange="document.myForm.submit();" class="form-control">
@@ -158,7 +165,7 @@ $count_record = NumRowsDB($coreLanguageSQL, $query);
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-3">
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="search" name="search" placeholder="ค้นหา" value="<?php echo  trim($_REQUEST['search']) ?>">
                                     </div>

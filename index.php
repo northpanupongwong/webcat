@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<?php include('lib/connect.php'); ?>
+<?php include('lib/connect.php');
+?>
 <html lang="en">
 
 <head>

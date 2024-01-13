@@ -15,10 +15,10 @@ function checkLoginUser() {
     });
 }
 
-function checkLogoutUser() {
+function checkLogoutUser(url) {
 
     var TYPE = "POST";
-    var URL = "./logout.php";
+    var URL = url;
 
     var dataSet = {};
     jQuery.ajax({
