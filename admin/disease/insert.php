@@ -40,6 +40,19 @@ if ($_REQUEST['execute'] == "insert") {
     $sql = "INSERT INTO " . $table . "(" . implode(",", array_keys($insert)) . ") VALUES (" . implode(",", array_values($insert)) . ")";
     $Query = $db->Execute($sql);
 
+    $cid = $db->insert_Id();
+
+    foreach($_REQUEST['symptom'] as $val){
+        $insert2 = array();
+        $insert2["symptom_id"] = "'" . $val . "'";
+        $insert2["disease_id"] = "'" . $cid . "'";
+        $insert2["kind"] = "'" . $_REQUEST['kind'] . "'";
+        $sql2 = "INSERT INTO " . $table2 . "(" . implode(",", array_keys($insert2)) . ") VALUES (" . implode(",", array_values($insert2)) . ")";
+        $Query2 = $db->Execute($sql2);
+    }
+
+    
+
     logs_access('Insert Disease');
 }
 

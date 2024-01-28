@@ -29,7 +29,7 @@ if ($_REQUEST['execute'] == "insert") {
 	logs_access('Insert Clinic');
 }
 
-include("../lib/disconnect.php");
+$db->close();
 ?>
 
 <form action="clinic.php" method="post" name="myFormAction" id="myFormAction">

@@ -3,25 +3,28 @@ include("../lib/session.php");
 include("../lib/connect.php");
 include("../lib/function.php");
 include("./config.php");
-$sql = "SELECT  " . $table . "_pic,".$table."_file  FROM " . $table . " WHERE  " . $table . "_id='" . $_REQUEST['id'] . "' ";
+$sql = "SELECT  " . $table . "_pic," . $table . "_file  FROM " . $table . " WHERE  " . $table . "_id='" . $_REQUEST['id'] . "' ";
 $Query = QueryDB($coreLanguageSQL, $sql);
 $Row = FetchArrayDB($coreLanguageSQL, $Query);
 $deletepic = $Row[0];
-$deletehtml=$Row[1];
+$deletehtml = $Row[1];
 $file_path = '../../upload/' . $namefolder;
 
-if(file_exists($file_path."/".$deletepic)) {
-    @unlink($file_path."/".$deletepic);
+if (file_exists($file_path . "/" . $deletepic)) {
+    @unlink($file_path . "/" . $deletepic);
 }
 
 ######################## Delete  In Folder HTML ###############################
-if(file_exists($path_html."/".$deletehtml)) {
-    @unlink($path_html."/".$deletehtml);
+if (file_exists($path_html . "/" . $deletehtml)) {
+    @unlink($path_html . "/" . $deletehtml);
 }
 
+$sql3 = "DELETE FROM " . $table2 . " WHERE disease_id=" . $_REQUEST['id'] . " ";
+$Query3 = QueryDB($coreLanguageSQL, $sql3);
+
 ######################### Delete  Contant ###############################
-$sql="DELETE FROM ".$table." WHERE ".$table."_id=".$_REQUEST['id']." ";
-$Query=QueryDB($coreLanguageSQL,$sql);
+$sql = "DELETE FROM " . $table . " WHERE " . $table . "_id=" . $_REQUEST['id'] . " ";
+$Query = QueryDB($coreLanguageSQL, $sql);
 
 logs_access('Delete Disease');
 

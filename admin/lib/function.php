@@ -260,3 +260,4 @@ function getHelpSuccess()
    $RecordCount = NumRowsDB($coreLanguageSQL, $Query);
    return ($RecordCount);
 }
+

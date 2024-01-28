@@ -8,20 +8,20 @@ if ($_REQUEST['execute'] == "insert") {
 	// $randomNumber = rand(1111, 9999);
 
 	if (!is_dir($path_html)) {
-        mkdir($path_html, 0777);
-    }
+		mkdir($path_html, 0777);
+	}
 
-    if (@file_exists($path_html . "/" . $htmlfiledelete)) {
-        @unlink($path_html . "/" . $htmlfiledelete);
-    }
-    if ($_POST['inputHtml'] != "") {
-        $filename = $randomNumber . "-" . $randomNumber . ".html";
-        $HTMLToolContent = str_replace("\\\"", "\"", $_POST['inputHtml']);
-        $fp = fopen($path_html . "/" . $filename, "w");
-        chmod($path_html . "/" . $filename, 0777);
-        fwrite($fp, $HTMLToolContent);
-        fclose($fp);
-    }
+	if (@file_exists($path_html . "/" . $htmlfiledelete)) {
+		@unlink($path_html . "/" . $htmlfiledelete);
+	}
+	if ($_POST['inputHtml'] != "") {
+		$filename = $randomNumber . "-" . $randomNumber . ".html";
+		$HTMLToolContent = str_replace("\\\"", "\"", $_POST['inputHtml']);
+		$fp = fopen($path_html . "/" . $filename, "w");
+		chmod($path_html . "/" . $filename, 0777);
+		fwrite($fp, $HTMLToolContent);
+		fclose($fp);
+	}
 
 	$update = array();
 	$update[] = $table . "_subject='" . $_POST["subject"] . "'";
@@ -30,13 +30,25 @@ if ($_REQUEST['execute'] == "insert") {
 	$update[] = $table . "_symptom='" . serialize($_POST["symptom"]) . "'";
 
 	$update[] = $table . "_pic='" . $_POST["filename"] . "'";
-	$update[] = $table . "_file='" . $filename. "'";
+	$update[] = $table . "_file='" . $filename . "'";
 
 	$update[] = $table . "_lastdate=NOW()";
 
 
 	$sql = "UPDATE " . $table . " SET " . implode(",", $update) . " WHERE " . $table . "_id='" . $_POST["selectid"] . "' ";
 	$Query = QueryDB($coreLanguageSQL, $sql);
+
+	$sql3 = "DELETE FROM " . $table2 . " WHERE disease_id=" . $_REQUEST['selectid'] . " ";
+	$Query3 = QueryDB($coreLanguageSQL, $sql3);
+
+	foreach ($_REQUEST['symptom'] as $val) {
+		$insert2 = array();
+		$insert2["symptom_id"] = "'" . $val . "'";
+		$insert2["disease_id"] = "'" . $_POST["selectid"] . "'";
+		$insert2["kind"] = "'" . $_POST['kind'] . "'";
+		$sql2 = "INSERT INTO " . $table2 . "(" . implode(",", array_keys($insert2)) . ") VALUES (" . implode(",", array_values($insert2)) . ")";
+		$Query2 = $db->Execute($sql2);
+	}
 
 	// $insert = array();
 	// 	$insert[$table."_opentime"] = "'".$_REQUEST["OpenTime"]."'";

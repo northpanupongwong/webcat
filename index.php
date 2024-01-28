@@ -35,7 +35,7 @@
                             <div class="row g-lg-4 g-3">
                                 <div class="col-xxl-4 col-sm-6">
                                     <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
+                                        <a href="race-dog.php" class="link">
                                             <div class="thumbnail">
                                                 <figure class="cover">
                                                     <img class="img-cover lazy loaded" alt="H-img1" src="assets/img/upload/H-img1.png">
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col-xxl-4 col-sm-6">
                                     <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
+                                        <a href="disease-dog.php" class="link">
                                             <div class="thumbnail">
                                                 <figure class="cover">
                                                     <img class="img-cover lazy loaded" alt="H-img2" src="assets/img/upload/H-img2.png">
@@ -81,7 +81,7 @@
                                 </div>
                                 <div class="col-xxl-4 col-sm-6">
                                     <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
+                                        <a href="race-cat.php" class="link">
                                             <div class="thumbnail">
                                                 <figure class="cover">
                                                     <img class="img-cover lazy loaded" alt="H-img3" src="assets/img/upload/H-img3.png">
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="col-xxl-4 col-sm-6">
                                     <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
+                                        <a href="disease-cat.php" class="link">
                                             <div class="thumbnail">
                                                 <figure class="cover">
                                                     <img class="img-cover lazy loaded" alt="H-img4" src="assets/img/upload/H-img4.png">
@@ -127,7 +127,7 @@
                                 </div>
                                 <div class="col-xxl-4 col-sm-6">
                                     <div class="wrapper" style="border-radius:40px">
-                                        <a href="" class="link">
+                                        <a href="clinic.php" class="link">
                                             <div class="thumbnail">
                                                 <figure class="cover">
                                                     <img class="img-cover lazy loaded" alt="H-img5" src="assets/img/upload/H-img5.png">
