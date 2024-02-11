@@ -7,8 +7,11 @@ $id = $_REQUEST['id'];
 $arrrand = array();
 $arrset = array();
 
+
 // $_SESSION['valuein'] = array();
 // $_SESSION['valuenotin'] = array();
+
+print_pre($_SESSION);
 if (!isset($_SESSION['valuekind'])) {
     $_SESSION['valuekind'] = "";
 }

@@ -261,3 +261,15 @@ function getHelpSuccess()
    return ($RecordCount);
 }
 
+function getAn()
+{
+   ############################################
+   global $coreLanguageSQL;
+   $tb_help = "annouce";
+   $sql = "SELECT " . $tb_help . "_id FROM " . $tb_help . " WHERE " . $tb_help . "_status = 'Enable'";
+   //print_pre($sql);
+   $Query = QueryDB($coreLanguageSQL, $sql);
+   $RecordCount = NumRowsDB($coreLanguageSQL, $Query);
+   return ($RecordCount);
+}
+

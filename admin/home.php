@@ -7,6 +7,7 @@ include('./lib/connect.php');
 $valNumClinic = getHospital();
 $valNumHelp = getHelp();
 $valNumHelpSuccess = getHelpSuccess();
+$valAn = getAn();
 
 ?>
 <!DOCTYPE html>
@@ -173,8 +174,8 @@ $valNumHelpSuccess = getHelpSuccess();
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
-                                            <h3 class="danger">423</h3>
-                                            <span>เข้าชมเว็บไซต์</span>
+                                            <h3 class="danger"><?php echo $valAn ?></h3>
+                                            <span>ประกาศข่าวสาร</span>
                                         </div>
                                         <div class="align-self-center">
                                             <i class="fa fa-globe text-danger font-large-2 float-right"></i>
